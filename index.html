@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="icon" href="./Assets/Images/weather-icon-png-2.png">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="input-temp d-flex flex-md-column align-items-center gap-5 pt-5">
+        <input class="temp ps-3" type="text" id="kelvin" placeholder="°K">
+        <input class="temp ps-3" type="text" id="fahrenheit" placeholder="°F">
+        <input class="temp ps-3" type="text" id="Newton" placeholder="°N">
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+    
+        document.getElementById("kelvin").onchange = function() {myFunction()};
+
+        function myFunction() {
+            var x = document.getElementById("kelvin");
+            console.log(x.value);
+            const kelvin = x.value; // value 293 is assigned to variable kelvin.
+            const celsius = kelvin - 273; // ubtracting 273 from the kelvin variable.
+            let Fahrenheit = celsius * (9 / 5) + 32; // coverted value is assigned to fahrenheit.
+            let Newton = celsius * (33 / 100); 
+            Fahrenheit = Math.floor(Fahrenheit); // decimal number is rounded using .floor and stored in fahrenheit.
+            Newton = Math.floor(Newton); // decimal number is rounded using .floor and stored in newton.
+
+            // console.log(`The temperature is ${Fahrenheit} degrees fahrenheit.`);
+            // console.log(`The temperature is ${Newton} degrees newton.`);
+
+            document.getElementById("fahrenheit").value = Fahrenheit;
+            document.getElementById("Newton").value = Newton;
+        }
+        
+    </script>
+</body>
+</html>
