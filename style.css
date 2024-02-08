@@ -4,11 +4,16 @@
 }
 
 body {
-    background-image: url("./Assets/Images/pexels-brett-sayles-6481934.jpg");
+    font-family: 'Roboto Slab', serif;
+}
+
+.container-fluid{
+    background-image: url("./Assets/Images/sky-background-concept_23-2148644507\ \(1\).jpg");
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+   
 }
 
 .input-temp {
@@ -18,4 +23,13 @@ body {
 .input-temp input {
     height: 50px;
     width: 30%; 
+}
+/* 
+@keyframes container-fluid {
+    from {
+        transform: translateX()
+    }
+    to {
+        transform: translateX(-300px);
+    } */
 }
