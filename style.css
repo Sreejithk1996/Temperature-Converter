@@ -16,7 +16,6 @@ body {
 }
 
 .input-temp input {
-    border-radius: 50px;
     height: 50px;
     width: 30%; 
 }
