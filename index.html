@@ -12,22 +12,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
-<body class="d-flex align-items-center">
+<body >
     <div class="container-fluid">
-        <div class="input-temp d-flex flex-md-column align-items-center gap-3 pt-5">
+        
+        <img src="./Assets/Images/sky1.png" class="cloud1">
+        <img src="./Assets/Images/sky2.png" class="cloud2">
+        <img src="./Assets/Images/sky3.png" class="cloud3">
+        <img src="./Assets/Images/sky4.png" class="cloud4">
+        <img src="./Assets/Images/sky5.png" class="cloud5">
+        <img src="./Assets/Images/sky5.png" class="cloud6">
+        <img src="./Assets/Images/sky3.png" class="cloud7">
+
+        <div class="input-temp ">                                      
             <h3>Kelvin (°K)</h3>
-            <input class="temp ps-3 border-0 rounded-pill" type="text" id="kelvin" placeholder="°K">
+            <input class="temp ps-3  " type="text" id="kelvin" placeholder="°K">
             <h3>Fahrenheit (°F)</h3>
-            <input class="temp ps-3 border-0 rounded-pill" type="text" id="fahrenheit" placeholder="°F">
+            <input class="temp ps-3  " type="none" id="fahrenheit" placeholder="°F" >
             <h3>Newton (°N)</h3>
-            <input class="temp ps-3 border-0 rounded-pill" type="text" id="Newton" placeholder="°N">
+            <input class="temp ps-3  " type="text" id="Newton" placeholder="°N">
         </div>
     </div>
     
+    <!-- d-flex align-items-center -->
 
-
-
-
+    <!-- d-flex flex-md-column align-items-center gap-3 pt-5 -->
 
 
 
@@ -41,10 +49,10 @@
 
 
     <script>
-        document.getElementById("kelvin").onchange = function() {myFunction()};
+        document.getElementById("kelvin" ).onchange = function() {myFunction()};
 
 function myFunction() {
-    var x = document.getElementById("kelvin");
+    var x = document.getElementById("kelvin" );
     console.log(x.value);
     const kelvin = x.value; // value 293 is assigned to variable kelvin.
     const celsius = kelvin - 273; // ubtracting 273 from the kelvin variable.
@@ -56,8 +64,8 @@ function myFunction() {
     // console.log(`The temperature is ${Fahrenheit} degrees fahrenheit.`);
     // console.log(`The temperature is ${Newton} degrees newton.`);
 
-    document.getElementById("fahrenheit").value = Fahrenheit;
-    document.getElementById("Newton").value = Newton;
+    document.getElementById("fahrenheit").value = Fahrenheit + ' ' + '°F';
+    document.getElementById("Newton").value = Newton + ' ' + '°N';
 }
     </script>
     

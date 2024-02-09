@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 body {
@@ -8,28 +9,123 @@ body {
 }
 
 .container-fluid{
-    background-image: url("./Assets/Images/sky-background-concept_23-2148644507\ \(1\).jpg");
+    background-image: url("./Assets/Images/clearoff.jpg");
     background-position:center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container-fluid .cloud1 {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    z-index: 1;
+}
+
+.container-fluid .cloud2 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    z-index: 1;
+}
+
+.container-fluid .cloud4 {
+    position: absolute;
+    bottom: 230px;
+    left: 0;
+    width: 200px;
+    height: 110px;
+}
+
+.container-fluid .cloud3 {
+    position: absolute;
+    left: -250px;
+    animation-name: cloudfall1;
+    animation-duration: 40s;
+    /* animation-delay: 5s; */
+    animation-iteration-count: infinite;
+
+}
+.container-fluid .cloud5 {
+    position: absolute;
+    top: 190px;
+    left: -160px;
+    animation-name: cloudfall2;
+    animation-duration: 60s;
+    animation-delay: 40s;
+    animation-iteration-count: infinite;
+}
+
+.container-fluid .cloud6 {
+    position: absolute;
+    left: -160px;
+    animation-name: cloudfall2;
+    animation-duration: 60s;
+    animation-delay: 20s;
+    animation-iteration-count: infinite;
+
+}
+.container-fluid .cloud7 {
+    position: absolute;
+    top: 80px;
+    left: -320px;
+    animation-name: cloudfall1;
+    animation-duration: 60s;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
 }
 
 .input-temp {
-  width: 100%;
+    width: 450px;
+    height: 500px;
+    background-color: rgba(211, 160, 229, 0.567);
+    background-image: linear-gradient(rgba(145, 62, 204, 0.53),rgba(220, 152, 26, 0.179),rgba(83, 186, 224, 0.36));
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+    z-index: 3;
+    box-shadow: 10px 10px 15px rgba(2, 2, 2, 0.212);
 }
 
 .input-temp input {
-    height: 50px;
-    width: 30%; 
+    height: 60px;
+    width: 300px; 
+    border-radius: 30px;
+    transition: all 1s;
 }
-/* 
-@keyframes container-fluid {
-    from {
-        transform: translateX()
-    }
-    to {
-        transform: translateX(-300px);
-    } */
+
+.input-temp input:hover {
+    transition: width 1s;
+    width: 400px;
 }
+
+
+@keyframes cloudfall1 {
+    0%   { right:-100px;  }
+    100% { left:100%; }
+}
+
+@keyframes cloudfall2 {
+    0%   { right:-100px; }
+    100% { left:100%; }
+}
+
+@keyframes cloudfall3 {
+    0%   { right:-100px; }
+    100% { left:100%; }
+}
+
+@keyframes cloudfall4 {
+    0%   { right:-100px; }
+    100% { left:100%; }
+}
+
