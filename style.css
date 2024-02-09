@@ -6,7 +6,9 @@
 
 body {
     font-family: 'Roboto Slab', serif;
+    position: relative;
 }
+
 
 .container-fluid{
     background-image: url("./Assets/Images/clearoff.jpg");
@@ -19,7 +21,19 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    
 }
+
+/* .container-fluid:hover {
+    transform: scale(1.2);
+    transition: all 5s;
+} */
+
+/* .logo {
+    height: 70px;
+    position: absolute;
+    top: 20px;
+} */
 
 .container-fluid .cloud1 {
     position: absolute;
@@ -50,8 +64,14 @@ body {
     animation-duration: 40s;
     /* animation-delay: 5s; */
     animation-iteration-count: infinite;
-
 }
+
+.container-fluid .cloud3:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+    /* transition-timing-function: ease-in-out; */
+}
+
 .container-fluid .cloud5 {
     position: absolute;
     top: 190px;
@@ -62,6 +82,12 @@ body {
     animation-iteration-count: infinite;
 }
 
+.container-fluid .cloud5:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+    /* transition-timing-function: ease-in-out; */
+}
+
 .container-fluid .cloud6 {
     position: absolute;
     left: -160px;
@@ -69,8 +95,14 @@ body {
     animation-duration: 60s;
     animation-delay: 20s;
     animation-iteration-count: infinite;
-
 }
+
+.container-fluid .cloud6:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+    /* transition-timing-function: ease-in-out; */
+}
+
 .container-fluid .cloud7 {
     position: absolute;
     top: 80px;
@@ -80,12 +112,31 @@ body {
     animation-delay: 10s;
     animation-iteration-count: infinite;
 }
+.container-fluid .cloud7:hover {
+    transform: scale(1.05);
+    transition: all 0.5s ease-out;
+    /* transition-timing-function: ease-in-out; */
+}
+
+.container-fluid .cloud8 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+}
+
+.container-fluid .cloud8:hover {
+    transform: scale(1.06);
+    transition: all 1s ease-out;
+    /* transition-timing-function: ease-in-out; */
+}
 
 .input-temp {
+    font-family: 'Fjalla One', sans-serif;
     width: 450px;
     height: 500px;
     background-color: rgba(211, 160, 229, 0.567);
-    background-image: linear-gradient(rgba(145, 62, 204, 0.53),rgba(220, 152, 26, 0.179),rgba(83, 186, 224, 0.36));
+    background-image: linear-gradient(rgba(145, 62, 204, 0.289),rgba(220, 152, 26, 0.218),rgba(81, 245, 251, 0.459));
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -93,14 +144,21 @@ body {
     justify-content: space-evenly;
     transition: all 1s;
     z-index: 3;
+    box-shadow: -10px 10px 15px rgba(2, 2, 2, 0.212);
+}
+
+.input-temp:hover {
     box-shadow: 10px 10px 15px rgba(2, 2, 2, 0.212);
 }
 
 .input-temp input {
+    padding-left: 20px;
     height: 60px;
     width: 300px; 
     border-radius: 30px;
     transition: all 1s;
+    background: linear-gradient(0deg, #b090d0 0%, #fcfdff );
+    box-shadow: 4px 4px 12px 0px rgb(200 190 229 / 52%) inset, -4px -4px 12px 0px rgba(210, 173, 105, 0.641)inset; 
 }
 
 .input-temp input:hover {
